@@ -1,0 +1,12 @@
+﻿@model TaxAccounting.ViewModel.TrackerToDoListViewModel
+
+@{
+    ViewBag.Title = "Tracker To Do List";
+}
+
+<h2>To Do List</h2>
+
+@{
+    var grid = new WebGrid(Model.ToDoList);
+}
+@grid.GetHtml();

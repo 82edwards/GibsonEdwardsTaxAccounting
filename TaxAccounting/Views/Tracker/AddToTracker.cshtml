@@ -1,0 +1,61 @@
+﻿@model TaxAccounting.ViewModel.AddToTrackerViewModel
+
+<div>
+    <table>
+        <tr>
+            <td>
+                @Html.Label("Client")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.TrackerItem.Client)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Name")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.TrackerItem.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Address")
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.TrackerItem.Address, new { rows = "4", cols = "50" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Phone")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.TrackerItem.Phone)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Task")
+            </td>
+            <td>
+                @Html.DropDownList("TaskList", Model.CompleteTaskSelectList)
+            </td>
+        </tr>
+        <tr><td>
+                @Html.Label("Due Date")
+            </td>
+            <td>
+                @Html.TextBoxFor(model=>model.TrackerItem.DueDate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="btnSave" id="btnSave" value="Save" />
+            </td>
+            <td>
+                <input type="submit" name="btnCancel" id="btnCancel" value="Cancel" />
+            </td>
+        </tr>
+    </table>
+</div>
